@@ -38,4 +38,4 @@ jobs:
         run: exit 1
     
       - name: Terraform Apply
-        run: terraform apply -auto-approve
+        run: cd infra && terraform apply -auto-approve
