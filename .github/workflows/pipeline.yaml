@@ -28,10 +28,6 @@ jobs:
       - name: Terraform Validate
         id: validate
         run: cd infra && terraform validate -no-color
-
-      - name: Terraform Plan Status
-        if: steps.plan.outcome == 'failure'
-        run: exit 1
     
       - name: Terraform Apply
         run: cd infra && terraform apply -auto-approve
