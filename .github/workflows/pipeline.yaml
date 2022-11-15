@@ -15,5 +15,8 @@ jobs:
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       AWS_REGION: eu-west-1
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+    
       - name: Terraform Apply
         run: terraform apply -auto-approve
